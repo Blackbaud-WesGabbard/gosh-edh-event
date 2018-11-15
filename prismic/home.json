@@ -1,0 +1,187 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    }
+  },
+  "Banner" : {
+    "banner-image" : {
+      "type" : "Image",
+      "config" : {
+        "label" : "Banner Image",
+        "constraint" : {
+          "width" : 1560
+        }
+      }
+    },
+    "banner-title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "banner-content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "strong, em, hyperlink",
+        "label" : "Banner HTML"
+      }
+    },
+    "banner-cta" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "web",
+        "label" : "Banner CTA URL",
+        "placeholder" : "https://www.example.com"
+      }
+    }
+  },
+  "Steps" : {
+    "steps-items" : {
+      "type" : "Group",
+      "config" : {
+        "label" : "Steps",
+        "fields" : {
+          "icon" : {
+            "type" : "Image",
+            "config" : {
+              "label" : "Icon",
+              "constraint" : {
+                "width" : 360
+              }
+            }
+          },
+          "description" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Description"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Media" : {
+    "media-text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Description"
+      }
+    },
+    "media-html" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "strong, em, hyperlink",
+        "label" : "media-html"
+      }
+    },
+    "media-url" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "web",
+        "label" : "URL",
+        "placeholder" : "https://www.example.com"
+      }
+    }
+  },
+  "Meta" : {
+    "meta-url" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "web",
+        "label" : "URL",
+        "placeholder" : "https://www.example.com"
+      }
+    },
+    "meta-title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title",
+        "placeholder" : "Page title"
+      }
+    },
+    "meta-description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description",
+        "placeholder" : "160 character limit"
+      }
+    },
+    "meta-keywords" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Keywords",
+        "placeholder" : "Comma separated keywords"
+      }
+    },
+    "meta-author" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Author",
+        "placeholder" : "Comma separated authors"
+      }
+    },
+    "meta-ogType" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Type",
+        "placeholder" : "Open Graph type e.g. website"
+      }
+    },
+    "meta-ogTitle" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "OG Title",
+        "placeholder" : "Open graph title"
+      }
+    },
+    "meta-ogDescription" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "OG Description",
+        "placeholder" : "Open graph description"
+      }
+    },
+    "meta-ogUrl" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "web",
+        "label" : "OG URL",
+        "placeholder" : "https://www.example.com"
+      }
+    },
+    "meta-ogImage" : {
+      "type" : "Image",
+      "config" : {
+        "label" : "OG image",
+        "constraint" : {
+          "width" : 1200
+        }
+      }
+    },
+    "meta-favicon" : {
+      "type" : "Image",
+      "config" : {
+        "label" : "Favicon",
+        "constraint" : {
+          "width" : 32,
+          "height" : 32
+        }
+      }
+    },
+    "meta-appleTouchIcon" : {
+      "type" : "Image",
+      "config" : {
+        "label" : "Apple Touch Icon",
+        "constraint" : {
+          "width" : 128,
+          "height" : 128
+        }
+      }
+    }
+  }
+}

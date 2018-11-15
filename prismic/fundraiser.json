@@ -1,0 +1,76 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    }
+  },
+  "Badges": {
+    "badges-title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Title"
+      }
+    },
+    "badges-items" : {
+      "type" : "Group",
+      "config" : {
+        "label" : "Badges",
+        "fields" : {
+          "inactiveImage" : {
+            "type" : "Image",
+            "config" : {
+              "label" : "Inactive Image",
+              "constraint" : {
+                "width" : 512,
+                "height" : 512
+              }
+            }
+          },
+          "activeImage" : {
+            "type" : "Image",
+            "config" : {
+              "label" : "Active Image",
+              "constraint" : {
+                "width" : 512,
+                "height" : 512
+              }
+            }
+          },
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading4,heading5,heading6",
+              "label" : "Title"
+            }
+          },
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, preformatted, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+              "label" : "Description"
+            }
+          },
+          "type" : {
+            "type" : "Select",
+            "config" : {
+              "label" : "Type",
+              "options" : [ "Fundraising Amount", "Fundraising Percentage", "Fitness Amount", "Fitness Percentage" ],
+              "default_value" : "Fundraising Amount"
+            }
+          },
+          "amount" : {
+            "type" : "Number",
+            "config" : {
+              "label" : "Amount (in cents, metres or % depending on type)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "blackbaud-services-site-template",
+  "version": "1.0.0",
+  "description": "Services site template",
+  "main": "source/client.js",
+  "scripts": {
+    "start": "brb serve --config='./webpack.shared.config'",
+    "serve": "NODE_ENV=production brb serve --config='./webpack.shared.config'",
+    "build": "brb build --config='./webpack.shared.config'",
+    "build:staging": "ENV_FILE=.env.staging yarn build",
+    "build:prod": "ENV_FILE=.env.production yarn build",
+    "deploy:staging": "yarn build:staging && brb deploy --target=lambda --fn-name=shelterVirtualEventStaging --bucket=blackbaud.lambda.staging --prefix=shelterVirtualEventStaging",
+    "deploy:prod": "yarn build:prod && brb deploy --target=lambda --fn-name=shelterVirtualEventProd --bucket=blackbaud.lambda.production --prefix=shelterVirtualEventProd",
+    "lint": "brb lint",
+    "lint:fix": "prettier-standard 'source/**/*.js'",
+    "precommit": "lint-staged"
+  },
+  "author": "Everydayhero",
+  "dependencies": {
+    "boiler-room-builder": "^2.0.4",
+    "boiler-room-runner": "^1.4.3",
+    "constructicon": "2.0.0-19",
+    "cxsync": "^1.0.9",
+    "dotenv-webpack": "^1.4.1",
+    "es6-promise": "^4.0.5",
+    "lodash": "^4.17.0",
+    "minimal.css": "^1.0.1",
+    "moment": "^2.22.2",
+    "numbro": "^1.11.0",
+    "prismic-utils": "^6.1.1",
+    "react": "^15.4.2",
+    "react-avatar-editor": "^11.0.2",
+    "react-dom": "^15.4.2",
+    "react-dropzone": "^4.2.9",
+    "react-helmet": "^5.2.0",
+    "react-router": "^3.0.5",
+    "react-slick": "^0.23.1",
+    "react-slider": "^0.11.2",
+    "redux-thunk": "^2.2.0",
+    "supporticon": "^2.9.1"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.5",
+    "prettier-standard": "^8.0.1",
+    "redux-logger": "^2.8.1"
+  },
+  "lint-staged": {
+    "linters": {
+      "source/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  }
+}
